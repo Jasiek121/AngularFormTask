@@ -1,0 +1,31 @@
+<form #formularz="ngForm">
+    <div class="formularz">
+        <h1>Zamówienie:</h1>
+        <label>
+            <span>Imię i nazwisko:</span>
+            <input type="text" class="wpis" id="imieinazwisko" ngModel name="imieinazwisko">    
+        </label>
+        <label>
+            <span>Email:</span>
+            <input type="text" class="wpis" id="email" ngModel="Prosze podac Email" name="email">
+        </label>
+        <label>
+            <span>Produkt:</span>
+            <select id="produkt" class="produkt" ngModel name="produkt">
+            <option value="pralka">pralka</option>
+            <option value="telewizor">telewizor</option>
+            <option value="lodowka">lodowka</option>
+            <option value="laptop">laptop</option>
+            </select>
+        </label>
+        <label>
+            <span>Ilosc:</span>
+            <input type="number" class="wpis" id="ilosc" ngModel name="ilosc">
+        </label>
+        <label>
+            <span>Wiadomosc:</span>
+            <textarea class="wiadomosc" id="wiadomosc" ngModel name="wiadomosc"></textarea>
+            <button type="submit" class="przycisk"(click)="onSubmit()">Zamow</button>
+        </label>
+    </div>
+</form>
